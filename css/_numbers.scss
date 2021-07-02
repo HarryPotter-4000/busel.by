@@ -1,0 +1,96 @@
+.numbers__section {
+    background-color: black;
+    @include for-tablet-portrait {
+        padding: 0 50px;
+        margin-bottom: -1px;
+    }
+    @include for-phone-only {
+        padding-bottom: 80px;
+    }
+    .numbers-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 450px;
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .numbers-box__first {
+            align-self: flex-start;
+            padding: 0 60px;
+            @include for-tablet-portrait {
+                padding: 0;
+            }
+            @include for-phone-only {
+                align-self: center;
+            }
+            p {
+                @extend %numbers-text;
+            }
+            .numbers-box__quantity {
+                font-weight: bold;
+                font-size: 100px;
+                line-height: 122px;
+                text-align: center;
+                color: #FFFFFF;
+                @include for-tablet-portrait {
+                    font-size: 70px;
+                }
+            }
+        }
+
+        .numbers-box__second {
+            align-self: center;
+            padding: 0 60px;
+            @include for-tablet-portrait {
+                padding: 0;
+            }
+            @include for-phone-only {
+                align-self: center;
+            }
+            p {
+                @extend %numbers-text;
+            }
+            .numbers-box__quantity {
+                font-weight: bold;
+                font-size: 100px;
+                line-height: 122px;
+                text-align: center;
+                color: #FFFFFF;
+
+                @include for-tablet-portrait {
+                    font-size: 70px;
+                }
+            }
+        }
+        .numbers-box__third {
+            align-self: flex-end;
+            padding: 0 60px;
+            @include for-tablet-portrait {
+                padding: 0;
+            }
+            @include for-phone-only {
+                align-self: center;
+            }
+            p {
+                @extend %numbers-text;
+            }
+            .numbers-box__quantity {
+                font-weight: bold;
+                font-size: 100px;
+                line-height: 122px;
+                text-align: center;
+                color: #FFFFFF;
+
+                @include for-tablet-portrait {
+                    font-size: 70px;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,387 @@
+.gallery__section {
+    padding: 50px 0 0;
+    background-color: black;
+    margin-bottom: -1px;
+    @include for-phone-only {
+        padding: 0;
+    }
+    .gallery__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include for-tablet-portrait {
+            padding: 30px;
+        }
+        @include for-phone-only {
+            padding: 20px;
+        }
+        h2 {
+            align-self: flex-start;
+            max-width: 700px;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 61px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            span {
+                color: #00B25C;
+            }
+            @include for-phone-only {
+                font-size: 35px;
+                line-height: 43px;
+            }
+        }
+        .gallery__title {
+            max-width: 500px;
+            align-self: flex-start;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: left;
+            color: #FFFFFF;
+            margin-bottom: 120px;
+            @include for-phone-only {
+                font-size: 18px;
+                margin-bottom: 80px;
+            }
+        }
+
+        .gallery__item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .gallery-item__first {
+                width: 32%;
+                transform: translate(0, 100px);
+                @include for-phone-only {
+                    width: 96%;
+                    transform: none;
+                }
+                .gallery-item__cards {
+                    position: relative;
+                    &:hover .gallery-cards__back {
+                        display: block;
+                    }
+                    .gallery-item__img {
+                        width: 100%;
+                        @include for-tablet-portrait {
+                            width: 93%;
+                            padding: 10px 10px;
+                        }
+                        @include for-phone-only {
+                            width: 96%;
+                        }
+                    }
+                    .gallery-cards__back {
+                        padding: 20px 10px 0;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.83);
+                        display: none;
+                        @include for-tablet-portrait {
+                            padding: 20px 10px 0;
+                        }
+                        @include for-phone-only {
+                            padding: 30px 10px;
+                        }
+                        .gallery-cards__name {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 24px;
+                            line-height: 29px;
+                            color: #FFFFFF;
+                            margin-bottom: 30px;
+                            @include for-tablet-portrait {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .gallery-cards__lokation {
+                            margin-bottom: 80px;
+                            text-align: center;
+                            a {
+                                text-decoration: none;
+                                margin-bottom: 30px;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                i {
+                                    margin: 0 15px 0 5px;
+                                }
+                            }
+                            
+                            @include for-tablet-portrait {
+                                margin-bottom: 20px;
+                            }
+                            @include for-phone-only {
+                                padding: 0 0 0 10px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .gallery-cards__book {
+                            text-align: center;
+                            a {
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                border: 1px solid #00B25C;
+                                border-radius: 35px;
+                                padding: 10px 10px;
+                                &:hover {
+                                    background: #00B25C;
+                                }
+                                @include for-tablet-portrait {
+                                    font-size: 14px;
+                                    padding: 5px 5px;
+                                }
+                            }
+                            
+                            @include for-phone-only {
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .gallery-item__second {
+                width: 32%;
+                @include for-phone-only {
+                    transform: none;
+                    width: 96%;
+                }
+                .gallery-item__cards {
+                    position: relative;
+                    &:hover .gallery-cards__back {
+                        display: block;
+                    }
+                    .gallery-item__img {
+                        width: 100%;
+                        padding-bottom: 20px;
+                        @include for-tablet-portrait {
+                            width: 93%;
+                            padding: 10px 10px;
+                        }
+
+                        @include for-phone-only {
+                            width: 96%;
+                            transform: none;
+                        }
+                    }
+
+                    .gallery-cards__back {
+                        padding: 20px 10px 0;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.83);
+                        display: none;
+                        @include for-tablet-portrait {
+                            padding: 20px 10px 0;
+                        }
+                        @include for-phone-only {
+                            padding: 30px 10px;
+                        }
+
+                        .gallery-cards__name {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 24px;
+                            line-height: 29px;
+                            color: #FFFFFF;
+                            margin-bottom: 30px;
+
+                            @include for-tablet-portrait {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .gallery-cards__lokation {
+                            margin-bottom: 60px;
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                margin-bottom: 30px;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+
+                                i {
+                                    margin: 0 15px 0 5px;
+                                }
+                            }
+
+                            @include for-tablet-portrait {
+                                margin-bottom: 20px;
+                            }
+
+                            @include for-phone-only {
+                                padding: 0 0 0 10px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .gallery-cards__book {
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                border: 1px solid #00B25C;
+                                border-radius: 35px;
+                                padding: 10px 10px;
+
+                                &:hover {
+                                    background: #00B25C;
+                                }
+
+                                @include for-tablet-portrait {
+                                    font-size: 14px;
+                                    padding: 5px 5px;
+                                }
+                            }
+
+                            @include for-phone-only {
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .gallery-item__third {
+                width: 32%;
+                @include for-phone-only {
+                    transform: none;
+                    width: 96%;
+                }
+                .gallery-item__cards {
+                    position: relative;
+                    &:hover .gallery-cards__back {
+                        display: block;
+                    }
+                    .gallery-item__img {
+                        width: 100%;
+                        padding-bottom: 20px;
+                        @include for-tablet-portrait {
+                            width: 93%;
+                            padding: 10px 10px;
+                        }
+
+                        @include for-phone-only {
+                            width: 96%;
+                            transform: none;
+                        }
+                    }
+
+                    .gallery-cards__back {
+                        padding: 40px 40px 0;
+                        // height: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.83);
+                        display: none;
+                        @include for-tablet-portrait {
+                            padding: 20px 10px 0;
+                        }
+                        @include for-phone-only {
+                            padding: 30px 10px;
+                        }
+
+                        .gallery-cards__name {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 24px;
+                            line-height: 29px;
+                            color: #FFFFFF;
+                            margin-bottom: 30px;
+
+                            @include for-tablet-portrait {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .gallery-cards__lokation {
+                            margin-bottom: 80px;
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                margin-bottom: 30px;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+
+                                i {
+                                    margin: 0 15px 0 5px;
+                                }
+                            }
+
+                            @include for-tablet-portrait {
+                                margin-bottom: 20px;
+                            }
+
+                            @include for-phone-only {
+                                padding: 0 0 0 10px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .gallery-cards__book {
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                border: 1px solid #00B25C;
+                                border-radius: 35px;
+                                padding: 10px 10px;
+
+                                &:hover {
+                                    background: #00B25C;
+                                }
+
+                                @include for-tablet-portrait {
+                                    font-size: 14px;
+                                    padding: 5px 5px;
+                                }
+                            }
+
+                            @include for-phone-only {
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

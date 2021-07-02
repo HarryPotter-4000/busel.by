@@ -1,0 +1,243 @@
+.exhibitions__section {
+    background-color: black;
+    @include for-tablet-portrait {
+        margin-bottom: -1px;
+    }
+    @include for-phone-only {
+        // padding-top: 0 !important;
+    }
+    .exhibitions__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        @include for-tablet-portrait {
+            padding: 30px;
+        }
+
+        @include for-phone-only {
+            padding: 20px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 61px;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+            @include for-phone-only {
+                text-align: right;
+            }
+            span {
+                color: #00B25C;
+            }
+        }
+
+        p {
+            text-align: right;
+            max-width: 590px;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+            margin-bottom: 100px;
+            @include for-phone-only {
+                margin-bottom: 60px;
+            }
+        }
+
+        .exhibitions__offers {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+            @include for-tablet-portrait {}
+
+            @include for-phone-only {
+                justify-content: center;
+            }
+
+            .exhibitions__cards {
+                margin-bottom:30px;
+                width: 32%;
+                @include for-tablet-portrait {
+                    width: 48%;
+                }
+
+                @include for-phone-only {
+                    width: 98%;
+                }
+                .exhibitions__img {
+                    position: relative;
+                    .exhibitions__photo {
+                        width: 100%;
+                    }
+                    .exhibitions__back {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.83);
+                        display: none;
+                        @include for-phone-only {
+                            padding: 0 10px;
+                        }
+                        .exhibitions__rating {
+                            padding: 20px 20px 0;
+                            margin-bottom: 30px;
+                            @include for-phone-only {
+                                margin: 0;
+                                padding: 10px 0;
+                            }
+                            a {
+                                text-decoration: none;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                i {
+                                    margin-right: 10px;
+                                    color: #00B25C;
+                                }
+                            }
+                        }
+                        .exhibitions__name {
+                            h3 {
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 26px;
+                                line-height: 29px;
+                                color: #FFFFFF;
+                                margin-bottom: 10px;
+                            }
+
+                            .exhibitions__text {
+                                text-align: center;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                margin-bottom: 50px;
+                                @include for-tablet-portrait {
+                                    margin-bottom: 50px;
+                                }
+
+                                @include for-phone-only {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+
+                        .exhibitions__lokation {
+                            padding: 0 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            margin-bottom: 60px;
+                            @include for-tablet-portrait {
+                                margin-bottom: 20px;
+                            }
+                            @include for-phone-only {
+                                padding: 0 0 0 10px;
+                                margin-bottom: 10px;
+                            }
+                            .exhibitions-location__map {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: flex-start;
+
+                                i {
+                                    margin: 0 15px 0 5px;
+                                }
+                            }
+                            a {
+                                text-decoration: none;
+                                margin-bottom: 20px;
+                                font-weight: normal;
+                                font-size: 12px;
+                                line-height: 15px;
+                                color: #FFFFFF;
+                                @include for-phone-only {
+                                    margin-bottom: 10px;
+                                }
+                                i {
+                                    margin-right: 20px;
+                                    font-size: 20px;
+                                }
+                            }
+                            .exhibitions-location__info {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: flex-start;
+
+                                i {
+                                    margin: 0 20px 0 5px;
+                                }
+                            }
+                        }
+
+                        .exhibitions__book {
+                            padding: 0 20px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            margin-bottom: 30px;
+                            @include for-tablet-portrait {
+                                margin-bottom: 0;
+                            }
+                            @include for-phone-only {
+                                padding: 0;
+                            }
+                            a {
+                                text-decoration: none;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 22px;
+                                color: #FFFFFF;
+                                border: 1px solid #00B25C;
+                                border-radius: 35px;
+                                padding: 10px 30px;
+                                @include for-phone-only {
+                                    padding: 10px 20px;
+                                }
+                                &:hover {
+                                    background: #00B25C;
+                                }
+                            }
+                        }
+                    }
+                    &:hover .exhibitions__back {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+        .exhibitions__link {
+            align-self: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+            border: 0.5px solid #FFFFFF;
+            border-radius: 40px;
+            padding: 10px 50px;
+            margin-bottom: 80px;
+
+            &:hover {
+                background-color: #00B25C;
+            }
+        }
+    }
+}

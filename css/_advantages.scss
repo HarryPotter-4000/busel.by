@@ -1,0 +1,133 @@
+.advantages__section {
+    padding: 100px 0 50px 0;
+    background-color: black;
+    @include for-tablet-portrait {
+        margin-bottom: -1px;
+    }
+
+    @include for-phone-only {
+        padding-bottom: 30px;
+    }
+    .advantages__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include for-tablet-portrait {
+            padding: 0 30px;
+        }
+        @include for-phone-only {}
+        h2 {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 61px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+
+            span {
+                color: #00B25C;
+            }
+            @include for-phone-only {
+                text-align: center;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 44px;
+                color: #FFF;
+                span {
+                    color: #00B25C;
+                }
+            }
+        }
+
+        .advantages__title {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 120px;
+            @include for-tablet-portrait {
+                padding: 0 30px;
+            }
+            @include for-phone-only {
+                margin-bottom: 60px;
+            }
+        }
+
+        .advantages__parts {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 100px;
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+            }
+            .advantages__item {
+                width: 31%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @include for-phone-only {
+                    width: 95%;
+                    margin-bottom: 60px;
+                }
+                .advantages__img {
+                    margin-bottom: 60px;
+                    &:hover {
+                        transition: all 1s linear;
+                        transform: scale(1.2);
+                    }
+                }
+
+                .advantages__text {
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #FFFFFF;
+
+                    a {
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 30px;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        &:hover {
+                            color: #00B25C;
+                        }
+                    }
+                }
+            }
+        }
+
+        .advantages__link {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0.5px solid #FFFFFF;
+            border-radius: 40px;
+            padding: 10px 50px;
+            margin-bottom: 80px;
+
+            &:hover {
+                background-color: #00B25C;
+            }
+            @include for-phone-only {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

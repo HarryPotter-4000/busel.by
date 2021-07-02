@@ -1,0 +1,290 @@
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+header {
+    min-height: 810px;
+        @include for-tablet-portrait {
+            margin-bottom: -1px;
+            min-height: 710px;
+        }
+        @include for-phone-only {
+            min-height: 610px;
+        }
+    .nav__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        @include for-tablet-portrait {
+            padding:30px;
+        }
+        @include for-phone-only {
+            padding:30px 20px;
+        }
+        .navigation__home {
+            width: 10%;
+            .navigation__img {
+                width: 100%;
+                margin-right: 20px;
+            }
+            @include for-tablet-portrait {
+                order: 1;
+                width: 20%;
+            }
+
+            @include for-phone-only {
+                width: 30%;
+            }
+        }
+        
+        .navigation__menu {
+            width: 50%;
+            flex-grow: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    border: 0.5px solid transparent;
+                    border-radius: 30px;
+                    padding: 5px 25px;
+
+                    &:hover {
+                        border: 0.5px solid #FFF;
+                    }
+                }
+            }
+            @include for-tablet-portrait {
+                display: none;
+            }
+
+            @include for-phone-only {
+                display: none;
+            }
+        }
+        .navigation__mobile {
+            width: 10%;
+            display: none;
+            position: relative;
+            #navigation-mobile__toggle {
+                opacity: 0;
+            }
+            #navigation-mobile__toggle:checked~.navigation-mobile__btn>span {
+                transform: rotate(45deg);
+            }
+            #navigation-mobile__toggle:checked~.navigation-mobile__btn>span::before {
+                top: 0;
+                transform: rotate(0);
+            }
+            #navigation-mobile__toggle:checked~.navigation-mobile__btn>span::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+            #navigation-mobile__toggle:checked~.navigation-mobile__box {
+                visibility: visible;
+                left: 0;
+            }
+            .navigation-mobile__btn {
+                display: flex;
+                align-items: center;
+                position: fixed;
+                top: 50px;
+                left: 30px;
+                width: 30px;
+                height: 26px;
+                cursor: pointer;
+                z-index: 1;
+                @include for-phone-only {
+                    top: 40px;
+                    width: 20px;
+                }
+            }
+            .navigation-mobile__btn>span,
+            .navigation-mobile__btn>span::before,
+            .navigation-mobile__btn>span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #00B25C;
+                transition-duration: .25s;
+            }
+            .navigation-mobile__btn>span::before {
+                content: '';
+                top: -10px;
+            }
+            .navigation-mobile__btn>span::after {
+                content: '';
+                top: 10px;
+            }
+            .navigation-mobile__box {
+                display: block;
+                position: fixed;
+                visibility: hidden;
+                top: 0;
+                left: -100%;
+                // width: 240px;
+                height: 100%;
+                margin-top: 30px;
+                padding: 80px 0;
+                list-style: none;
+                background: linear-gradient(65deg, #000000 58%, rgba(0, 0, 0, 0) 98.06%);
+                // background:linear-gradient(45deg, #000000 61%, rgba(0, 0, 0, 0) 115.06%);
+                box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+                transition-duration: .25s;
+                .navigation-mobile__item {
+                    display: block;
+                    padding: 26px 30px;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition-duration: .25s;
+                    &:hover {
+                        color: #00B25C;
+                    }
+                    &::selection {
+                        background-color:white;
+                    }
+                }
+            }
+            @include for-tablet-portrait {
+                display: block;
+            }
+            @include for-phone-only {
+                display: block;
+            }
+        }
+
+        .navigation__languages {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                @include for-phone-only {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #FFFFFF;
+                        border: 0.5px solid transparent;
+                        border-radius: 30px;
+                        padding: 5px 20px;
+                        @include for-phone-only {
+                            padding: 3px 12px;
+                        }
+                        &:hover {
+                            border: 0.5px solid #FFF;
+                        }
+                    }
+                }
+            }
+            @include for-tablet-portrait {
+                order: 2;
+                width: 20%;
+            }
+        }
+    }
+
+    .navigation__descriptions {
+        padding: 140px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include for-tablet-portrait {
+            padding: 140px 30px;
+        }
+
+        .navigation__about {
+            h2 {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 49px;
+                color: #FFFFFF;
+                @include for-phone-only {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+
+            h1 {
+                font-weight: bold;
+                font-size: 80px;
+                line-height: 98px;
+                color: #FFFFFF;
+                @include for-phone-only {
+                    font-size: 40px;
+                    line-height: 49px;
+                }
+            }
+            @include for-phone-only {
+                align-self: center;
+            }
+        }
+
+        .navigation__socials {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                font-size: 26px;
+                padding-bottom: 20px;
+
+                i {
+                    color: #FFFFFF;
+
+                    &:hover {
+                        color: #00B25C;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .navigation__discover {
+        width: 360px;
+        margin: 0 auto;
+
+        a {
+            @extend %link;
+            display: inline-block;
+            padding: 10px 50px;
+            margin-bottom: 80px;
+        }
+
+    }
+}

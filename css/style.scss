@@ -1,0 +1,96 @@
+@import "_reset.scss";
+@import "_header.scss";
+@import "_numbers.scss";
+@import "_restaurants.scss";
+@import "_exhibitions";
+@import "_hall.scss";
+@import "_advantages.scss";
+@import "_gallery.scss";
+@import "_info.scss";
+@import "_tours.scss";
+@import "_footer.scss";
+
+
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+//Шаблоны!!!!!!!!!!!!!!!!!!!!!!!!
+
+%number-quantity {
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 122px;
+    text-align: center;
+    color: #FFFFFF;
+}
+%number-quantity-mobile {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+%numbers-text {
+    width: 180px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #00B25C;
+}
+%link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 10px 50px;
+    &:hover {
+        background-color: #00B25C;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+%h2 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+
+    span {
+        color: #00B25C;
+    }
+}
+%h3 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #00B25C;
+}
+//Шаблоны!!!!!!!!!!!!!!!!!!!!!!!!
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Montserrat;
+    font-style: normal;
+}
+
+
+
+
