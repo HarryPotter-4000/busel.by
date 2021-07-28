@@ -136,6 +136,7 @@ header {
                 top: 10px;
             }
             .navigation-mobile__box {
+                z-index: 2;
                 display: block;
                 position: fixed;
                 visibility: hidden;
@@ -143,12 +144,15 @@ header {
                 left: -100%;
                 // width: 240px;
                 height: 100%;
-                margin-top: 30px;
-                padding: 80px 0;
+                margin-top: 90px;
+                // padding: 80px 0;
                 list-style: none;
-                background: linear-gradient(65deg, #000000 58%, rgba(0, 0, 0, 0) 98.06%);
+                background: linear-gradient(24deg, #000000 41%, rgba(0, 0, 0, 0) 92.06%);
                 // background:linear-gradient(45deg, #000000 61%, rgba(0, 0, 0, 0) 115.06%);
-                box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+                @include for-tablet-portrait {
+                    background: linear-gradient(32deg, #000000 71%, rgba(0, 0, 0, 0) 92.06%);
+                }
+                box-shadow: 1px 5px 6px rgba(0, 0, 0, .2);
                 transition-duration: .25s;
                 .navigation-mobile__item {
                     display: block;
