@@ -93,6 +93,8 @@
 
                 @include for-phone-only {
                     margin-bottom: 50px;
+                    margin-left: 0;
+                    align-self: center;
                 }
                 i {
                     text-decoration: none;

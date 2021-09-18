@@ -3012,6 +3012,10 @@ header .navigation__discover a {
 @media (max-width: 599px) {
   .footer__section .footer__container .footer__company .footer__networks {
     margin-bottom: 50px;
+    margin-left: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 .footer__section .footer__container .footer__company .footer__networks i {
