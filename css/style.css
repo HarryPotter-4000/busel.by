@@ -633,7 +633,8 @@ header .nav__container .navigation__mobile .navigation-mobile__box {
 }
 @media (max-width: 768px) {
   header .nav__container .navigation__mobile .navigation-mobile__box {
-    background: linear-gradient(32deg, #000000 71%, rgba(0, 0, 0, 0) 92.06%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(71%, #000000), color-stop(92.06%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(0deg, #000000 71%, rgba(0, 0, 0, 0) 92.06%);
   }
 }
 header .nav__container .navigation__mobile .navigation-mobile__box .navigation-mobile__item {

@@ -150,7 +150,7 @@ header {
                 background: linear-gradient(24deg, #000000 41%, rgba(0, 0, 0, 0) 92.06%);
                 // background:linear-gradient(45deg, #000000 61%, rgba(0, 0, 0, 0) 115.06%);
                 @include for-tablet-portrait {
-                    background: linear-gradient(32deg, #000000 71%, rgba(0, 0, 0, 0) 92.06%);
+                    background: linear-gradient(0deg, #000000 71%, rgba(0, 0, 0, 0) 92.06%);
                 }
                 box-shadow: 1px 5px 6px rgba(0, 0, 0, .2);
                 transition-duration: .25s;
